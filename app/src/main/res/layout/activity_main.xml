@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgloginpage"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/signuptitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/titlecolor"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Create your Netflix account"/>
+
+    <!-- TextInputEditText untuk First Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstnameTextInputLayout"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signuptitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:background="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputEditText untuk Last Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastnameTextInputLayout"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstnameTextInputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:background="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputEditText untuk Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextInputLayout"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastnameTextInputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:background="@color/white"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputEditText untuk Password -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTextInputLayout"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTextInputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:endIconMode="password_toggle">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:background="@color/white"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- CheckBox -->
+    <CheckBox
+         android:id="@+id/agreeCheckBox"
+         android:layout_width="wrap_content"
+        android:layout_below="@id/passwordTextInputLayout"
+         android:layout_height="wrap_content"
+         android:layout_alignParentStart="true"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="50dp"
+         android:textColor="@color/white"
+         android:text="@string/agree"/>
+
+
+    <!-- Button Sign Up -->
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/agreeCheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#FF0000"
+        android:text="Sign Up"/>
+
+    <TextView
+        android:id="@+id/connecttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signupButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/white"
+        android:text="@string/connecttxt"/>
+
+    <RelativeLayout
+        android:id="@+id/connectwith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connecttext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp">
+
+        <!-- Logo Google -->
+        <ImageView
+            android:id="@+id/googlelogo"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/google1"/>
+
+        <!-- Logo Apple -->
+        <ImageView
+            android:id="@+id/applelogo"
+            android:layout_width="32dp"
+            android:layout_height="51dp"
+            android:layout_toRightOf="@id/googlelogo"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/applelogo1"/>
+
+        <!-- Logo Facebook -->
+        <ImageView
+            android:id="@+id/facebooklogo"
+            android:layout_width="32dp"
+            android:layout_height="51dp"
+            android:layout_toRightOf="@id/applelogo"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/facebook"/>
+    </RelativeLayout>
+
+    <!-- Sign In -->
+    <TextView
+        android:id="@+id/signUpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectwith"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/white"
+        android:text="@string/signin"/>
+
+</RelativeLayout>
